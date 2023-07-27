@@ -15,8 +15,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import com.apcoding.composenavigationlibrary.destinations.PostScreenDestination
 import com.apcoding.composenavigationlibrary.destinations.ProfileScreenDestination
-//import com.apcoding.composenavigationlibrary.destinations.PostScreenDestination
-//import com.apcoding.composenavigationlibrary.destinations.ProfileScreenDestination
 import com.apcoding.composenavigationlibrary.ui.theme.ComposeNavigationLibraryTheme
 import com.ramcosta.composedestinations.DestinationsNavHost
 import com.ramcosta.composedestinations.annotation.Destination
@@ -49,7 +47,7 @@ fun LoginScreen(
             navigator.navigate(
               ProfileScreenDestination(
                     User(
-                        name = "Chris P. Bacon",
+                        name = "Ankit Parida",
                         id = "userid",
                         created = LocalDateTime.now()
                     )
@@ -74,6 +72,7 @@ fun ProfileScreen(
     ) {
         Text("Profile Screen: $user", textAlign = TextAlign.Center)
         Button(onClick = {
+
             navigator.navigate(PostScreenDestination())
         }) {
             Text("Go to Post Screen")
